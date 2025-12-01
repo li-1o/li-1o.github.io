@@ -1,0 +1,30 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+      
+      <div style="flex: 1; min-width: 200px;">
+        <ul class="contact-list" style="list-style: none; margin: 0; padding: 0;">
+          {%- if site.email -%}
+            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {%- endif -%}
+          {%- if site.github_username -%}
+            <li>
+              <a href="https://github.com/{{ site.github_username| CGI_escape | escape }}">
+                <span class="username">github.com/{{ site.github_username }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <div style="flex: 1; text-align: center; min-width: 200px; padding-top: 10px;">
+        <p>{{ site.description | escape }}</p>
+      </div>
+      
+      <div style="flex: 1;"></div>
+
+    </div>
+  </div>
+</footer>
