@@ -1,0 +1,56 @@
+---
+---
+@import "minima";
+
+/* =========================================
+   VS Code / GitHub 风格复刻
+   ========================================= */
+
+body {
+  /* 1. 字体：使用系统原生字体 (Mac上就是精美的 San Francisco) */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  
+  /* 2. 颜色：使用柔和的深灰色，而不是刺眼的纯黑 */
+  color: #24292e;
+  
+  /* 3. 行高：保持舒适的阅读间距 */
+  line-height: 1.8;
+  
+  /* 4. 字号：稍微大一点点，阅读更轻松 */
+  font-size: 16px;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit; /* 继承上面的无衬线字体 */
+  font-weight: 600;     /* 加粗 */
+  color: #24292e;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+/* 引用块样式 (就是你截图里那个灰色背景的块) */
+blockquote {
+  color: #6a737d;            /* 文字变灰 */
+  border-left: 4px solid #dfe2e5; /* 左边加一条浅灰色的竖线 */
+  background-color: #f6f8fa; /* 背景变成极淡的灰色 */
+  padding: 10px 15px;        /* 内部留点空隙 */
+  margin: 0 0 16px 0;        /* 外部间距 */
+  font-style: normal;        /* 取消默认的斜体，VS Code 通常不斜 */
+}
+
+/* 链接样式 */
+a {
+  color: #0366d6; /* GitHub 经典的蓝色 */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 代码块样式优化 */
+pre, code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background-color: #f6f8fa; /* 代码背景也统一成淡灰 */
+  border-radius: 3px;
+}
