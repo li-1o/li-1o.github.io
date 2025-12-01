@@ -2,7 +2,6 @@
 layout: post
 title: "Hello World: 我的博客搭建之旅"
 date: 2025-12-1
-categories: i
 ---
 
 #s。# 李诗沣。#。垃圾分类。 hello world!
