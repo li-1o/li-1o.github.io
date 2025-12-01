@@ -5,3 +5,4 @@ theme: minima
 github_username: li-1o
 plugins:
   - jekyll-seo-tag
+show_excerpts: true
