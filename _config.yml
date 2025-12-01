@@ -1,2 +1,14 @@
-title: My Blog
+
+title: Li-1o 的思考空间        
+email: li1oxiang26@gmail.com
+description: >-               
+  
+
+
 theme: minima
+
+github_username: li-1o        
+
+
+plugins:
+  - jekyll-seo-tag
