@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World: 我的博客搭建之旅"
-data: 2025-12-1
+date: 2025-12-1
 categories: i
 ---
 
