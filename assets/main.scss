@@ -54,3 +54,16 @@ pre, code {
   background-color: #f6f8fa; /* 代码背景也统一成淡灰 */
   border-radius: 3px;
 }
+/* =========================================
+   文章详情页标题优化 (H1)
+   ========================================= */
+
+/* 调整文章页的主标题 (H1) */
+.post-content h1:first-child,
+.post-content h1 {
+  /* 标题大小：从默认的 40+px 降到 36px 或 32px 会更精致 */
+  font-size: 36px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 15px; /* 标题和日期之间的距离 */
+}
