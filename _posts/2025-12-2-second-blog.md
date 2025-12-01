@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hello World: 我的博客搭建之旅"
-data: 2025-12-1
+title: "Hello World: 啊数据的法律；地方"
+data: 2025-12-2
 categories: i
 ---
 
