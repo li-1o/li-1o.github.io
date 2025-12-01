@@ -23,6 +23,7 @@ a:hover, .post-link:hover {
 }
 
 /* 引用块 (Blockquote) 样式 */
+/* 引用块样式 (优化版) */
 blockquote {
   color: #6a737d;
   border-left: 4px solid #dfe2e5;
@@ -30,8 +31,11 @@ blockquote {
   padding: 10px 15px;
   margin: 0 0 16px 0;
   font-style: normal;
+  
+  /* 👇 这两行是你截图里缺少的，必须加上！ 👇 */
+  font-size: 15px;   /* 比正文小一号，显精致 */
+  line-height: 1.6;  /* 行距稍微收紧一点 */
 }
-
 /* 代码块背景 */
 pre, code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
