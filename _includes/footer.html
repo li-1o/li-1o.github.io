@@ -51,38 +51,39 @@
 </button>
 
 <style>
-  /* 按钮样式 */
+  /* 极简低饱和按钮样式 */
   #back-to-top {
-    display: none; /* 默认隐藏 */
+    display: none;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 40px;
+    right: 40px;
     z-index: 99;
-    border: none;
+    border: 1px solid #e1e4e8; /* 极淡的边框 */
     outline: none;
-    background-color: #24292e; /* 深灰色背景 */
-    color: white;
+    
+    /* 核心：低饱和背景 */
+    background-color: rgba(255, 255, 255, 0.8); /* 白色半透明 */
+    backdrop-filter: blur(5px); /* 毛玻璃效果 (现代浏览器支持) */
+    
+    color: #6a737d; /* 图标用深灰色，而不是纯黑 */
     cursor: pointer;
     padding: 10px;
-    border-radius: 50%; /* 圆形 */
-    width: 45px;
-    height: 45px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 8px; /* 圆角矩形，比圆形更现代 */
+    width: 42px;
+    height: 42px;
+    
+    /* 柔和的阴影 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
   }
 
-  /* 鼠标悬停效果 */
+  /* 悬停效果：稍微变深一点点 */
   #back-to-top:hover {
-    background-color: #0366d6; /* 悬停变蓝 */
-    transform: translateY(-3px); /* 微微上浮 */
+    background-color: #fff;
+    color: #24292e; /* 图标变黑 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
   }
-
-  /* 图标大小 */
-  #back-to-top svg {
-    width: 24px;
-    height: 24px;
-  }
-</style>
 
 <script>
   // 监听滚动事件

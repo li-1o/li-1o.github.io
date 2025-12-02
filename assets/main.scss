@@ -111,3 +111,13 @@ pre, code {
   font-size: 18px !important;
   font-weight: 600;
 }
+
+/* 网站主标题优化 */
+.site-title {
+  font-weight: 700 !important;
+  font-size: 26px !important;
+  color: #000 !important;
+  
+  /* 重点在这里：把之前的 -0.5px 改回 0 或者 1px */
+  letter-spacing: 0 !important; /* 0 代表默认自然间距 */
+}
