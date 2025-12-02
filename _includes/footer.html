@@ -43,3 +43,62 @@
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
+
+<button id="back-to-top" title="Go to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<style>
+  /* 按钮样式 */
+  #back-to-top {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #24292e; /* 深灰色背景 */
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%; /* 圆形 */
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  /* 鼠标悬停效果 */
+  #back-to-top:hover {
+    background-color: #0366d6; /* 悬停变蓝 */
+    transform: translateY(-3px); /* 微微上浮 */
+  }
+
+  /* 图标大小 */
+  #back-to-top svg {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+<script>
+  // 监听滚动事件
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    var btn = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "block"; // 滚过300px显示
+    } else {
+      btn.style.display = "none";  // 否则隐藏
+    }
+  }
+
+  // 点击回到顶部
+  document.getElementById("back-to-top").addEventListener("click", function(){
+    window.scrollTo({top: 0, behavior: 'smooth'}); // 平滑滚动
+  });
+</script>
