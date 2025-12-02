@@ -45,7 +45,7 @@
 </script>
 
 <button id="back-to-top" title="Go to top">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M18 15l-6-6-6 6"/>
   </svg>
 </button>
@@ -53,53 +53,49 @@
 <style>
   /* 极简低饱和按钮样式 */
   #back-to-top {
-    display: none;
+    display: none; /* 默认隐藏 */
     position: fixed;
     bottom: 40px;
     right: 40px;
     z-index: 99;
-    border: 1px solid #e1e4e8; /* 极淡的边框 */
+    border: 1px solid #e1e4e8;
     outline: none;
-    
-    /* 核心：低饱和背景 */
-    background-color: rgba(255, 255, 255, 0.8); /* 白色半透明 */
-    backdrop-filter: blur(5px); /* 毛玻璃效果 (现代浏览器支持) */
-    
-    color: #6a737d; /* 图标用深灰色，而不是纯黑 */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    color: #6a737d;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 8px; /* 圆角矩形，比圆形更现代 */
+    padding: 8px; /*稍微改小一点内边距以居中SVG*/
+    border-radius: 8px;
     width: 42px;
     height: 42px;
-    
-    /* 柔和的阴影 */
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
+    align-items: center; /* 确保图标居中 */
+    justify-content: center; /* 确保图标居中 */
   }
 
-  /* 悬停效果：稍微变深一点点 */
   #back-to-top:hover {
     background-color: #fff;
-    color: #24292e; /* 图标变黑 */
+    color: #24292e;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transform: translateY(-2px);
   }
-
-<script>
+</style> <script>
   // 监听滚动事件
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
     var btn = document.getElementById("back-to-top");
+    // 为了兼容不同浏览器，这里加了 document.documentElement
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      btn.style.display = "block"; // 滚过300px显示
+      btn.style.display = "flex"; // 用 flex 保证图标居中
     } else {
-      btn.style.display = "none";  // 否则隐藏
+      btn.style.display = "none";
     }
   }
 
   // 点击回到顶部
   document.getElementById("back-to-top").addEventListener("click", function(){
-    window.scrollTo({top: 0, behavior: 'smooth'}); // 平滑滚动
+    window.scrollTo({top: 0, behavior: 'smooth'});
   });
 </script>
