@@ -121,3 +121,32 @@ pre, code {
   /* 重点在这里：把之前的 -0.5px 改回 0 或者 1px */
   letter-spacing: 0 !important; /* 0 代表默认自然间距 */
 }
+
+/* 6. 图片和 Figure 容器样式优化 (针对您的自定义类名 bp-figure) */
+
+/* 优化整个 figure 容器 (.bp-figure) */
+.bp-figure {
+    max-width: 800px; /* 限制宽度 */
+    /* 核心：增加图片上下方的留白 (40px)，并居中 */
+    margin: 40px auto !important; 
+    clear: both; 
+}
+
+/* 优化图片本身 */
+.bp-figure img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    border: 1px solid #e0e0e0; /* 增加一个细边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* 轻微阴影 */
+}
+
+/* 优化图片标题 (figcaption) */
+.bp-figure figcaption {
+    text-align: center;
+    font-size: 0.95em; 
+    color: #6a737d; /* 柔和的灰色 */
+    margin-top: 15px; 
+    font-style: italic;
+    padding: 5px 10px;
+}
