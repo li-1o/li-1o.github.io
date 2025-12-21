@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "球蟒的经典基因锚点"
-date: 2025-12-14
+date: 2025-07-14
 categories: ballpython
 excerpt: "用少量“锚点基因”建立读图能力与组合分工。我们关心的不只是“像什么”，更是“它在组合里通常起什么作用”。"
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "球蟒体色的物理学机制"
-date: 2025-12-13
+date: 2025-07-13
 categories: ballpython
 excerpt: "把体色/花纹从“外观标签”拉回到发育过程 + 光学叠加的机制层。"
 ---
